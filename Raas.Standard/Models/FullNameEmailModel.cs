@@ -18,43 +18,43 @@ using TangoCard.Raas.Utilities;
 
 namespace TangoCard.Raas.Models
 {
-    public class RaasServerErrorModel : BaseModel 
+    public class FullNameEmailModel : BaseModel 
     {
         // These fields hold the values for the public properties.
-        private string message;
-        private int code;
+        private string fullName;
+        private string emailAddress;
 
         /// <summary>
-        /// The error message
+        /// The full name
         /// </summary>
-        [JsonProperty("message")]
-        public string Message 
+        [JsonProperty("fullName")]
+        public string FullName 
         { 
             get 
             {
-                return this.message; 
+                return this.fullName; 
             } 
             set 
             {
-                this.message = value;
-                onPropertyChanged("Message");
+                this.fullName = value;
+                onPropertyChanged("FullName");
             }
         }
 
         /// <summary>
-        /// The RaaS error code
+        /// The email address
         /// </summary>
-        [JsonProperty("code")]
-        public int Code 
+        [JsonProperty("emailAddress")]
+        public string EmailAddress 
         { 
             get 
             {
-                return this.code; 
+                return this.emailAddress; 
             } 
             set 
             {
-                this.code = value;
-                onPropertyChanged("Code");
+                this.emailAddress = value;
+                onPropertyChanged("EmailAddress");
             }
         }
     }

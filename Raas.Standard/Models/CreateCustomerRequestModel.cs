@@ -25,7 +25,7 @@ namespace TangoCard.Raas.Models
         private string displayName;
 
         /// <summary>
-        /// Customer Identifier
+        /// The customer identifier
         /// </summary>
         [JsonProperty("customerIdentifier")]
         public string CustomerIdentifier 
@@ -42,7 +42,7 @@ namespace TangoCard.Raas.Models
         }
 
         /// <summary>
-        /// Display Name
+        /// The display name
         /// </summary>
         [JsonProperty("displayName")]
         public string DisplayName 
