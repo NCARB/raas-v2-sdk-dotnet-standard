@@ -43,7 +43,7 @@ namespace TangoCard.Raas
         /// Tests retrieving all accounts under a specific customer 
         /// </summary>
         [Test]
-        public async Task TestTestGetAllCustomerAccounts() 
+        public async Task TestGetAllCustomerAccounts() 
         {
             // Parameters for the API call
             string customerIdentifier = "sdkautotest1";
@@ -75,7 +75,7 @@ namespace TangoCard.Raas
         /// Tests retrieving all accounts 
         /// </summary>
         [Test]
-        public async Task TestTestGetAllAccounts() 
+        public async Task TestGetAllAccounts() 
         {
 
             // Perform API call
@@ -105,7 +105,7 @@ namespace TangoCard.Raas
         /// Tests retrieving a single account 
         /// </summary>
         [Test]
-        public async Task TestTestGetSingleAccount() 
+        public async Task TestGetSingleAccount() 
         {
             // Parameters for the API call
             string accountIdentifier = "sdkautotest2";

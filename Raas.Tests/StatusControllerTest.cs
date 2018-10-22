@@ -43,7 +43,7 @@ namespace TangoCard.Raas
         /// Tests if we can retrieve the system status 
         /// </summary>
         [Test]
-        public async Task TestTestStatusIsOK() 
+        public async Task TestStatusIsOK() 
         {
 
             // Perform API call

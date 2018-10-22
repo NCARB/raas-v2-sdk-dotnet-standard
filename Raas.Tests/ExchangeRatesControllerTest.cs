@@ -43,7 +43,7 @@ namespace TangoCard.Raas
         /// Tests if we can successfully retrieve exchange rates 
         /// </summary>
         [Test]
-        public async Task TestTestRetrieveExchangeRates() 
+        public async Task TestRetrieveExchangeRates() 
         {
 
             // Perform API call
