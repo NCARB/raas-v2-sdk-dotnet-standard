@@ -1,7 +1,7 @@
 /*
  * Raas.Standard
  *
- * This file was automatically generated for Tango Card, Inc. by APIMATIC v2.0 ( https://apimatic.io )
+ * This file was automatically generated for Tango Card, Inc. by APIMATIC v2.0 ( https://apimatic.io ).
  */
 using System;
 using System.IO;
@@ -24,6 +24,7 @@ namespace TangoCard.Raas.Models
         private string label;
         private string mvalue;
         private string type;
+        private string credentialType;
 
         /// <summary>
         /// The label of the credential
@@ -73,6 +74,23 @@ namespace TangoCard.Raas.Models
             {
                 this.type = value;
                 onPropertyChanged("Type");
+            }
+        }
+
+        /// <summary>
+        /// The type of the credential
+        /// </summary>
+        [JsonProperty("credentialType")]
+        public string CredentialType 
+        { 
+            get 
+            {
+                return this.credentialType; 
+            } 
+            set 
+            {
+                this.credentialType = value;
+                onPropertyChanged("CredentialType");
             }
         }
     }

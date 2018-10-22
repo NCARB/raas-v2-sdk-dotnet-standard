@@ -1,8 +1,3 @@
-/*
- * Raas.Standard
- *
- * This file was automatically generated for Tango Card, Inc. by APIMATIC v2.0 ( https://apimatic.io )
- */
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

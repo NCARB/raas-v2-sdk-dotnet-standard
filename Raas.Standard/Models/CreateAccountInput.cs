@@ -18,15 +18,14 @@ using TangoCard.Raas.Utilities;
 
 namespace TangoCard.Raas.Models
 {
-    public class UnregisterCreditCardRequestModel : BaseModel 
+    public class CreateAccountInput : BaseModel 
     {
         // These fields hold the values for the public properties.
         private string customerIdentifier;
-        private string accountIdentifier;
-        private string creditCardToken;
+        private Models.CreateAccountRequestModel body;
 
         /// <summary>
-        /// The customer identifier
+        /// Customer Identifier
         /// </summary>
         [JsonProperty("customerIdentifier")]
         public string CustomerIdentifier 
@@ -43,36 +42,19 @@ namespace TangoCard.Raas.Models
         }
 
         /// <summary>
-        /// The account identifier
+        /// Request Body
         /// </summary>
-        [JsonProperty("accountIdentifier")]
-        public string AccountIdentifier 
+        [JsonProperty("body")]
+        public Models.CreateAccountRequestModel Body 
         { 
             get 
             {
-                return this.accountIdentifier; 
+                return this.body; 
             } 
             set 
             {
-                this.accountIdentifier = value;
-                onPropertyChanged("AccountIdentifier");
-            }
-        }
-
-        /// <summary>
-        /// The credit card token
-        /// </summary>
-        [JsonProperty("creditCardToken")]
-        public string CreditCardToken 
-        { 
-            get 
-            {
-                return this.creditCardToken; 
-            } 
-            set 
-            {
-                this.creditCardToken = value;
-                onPropertyChanged("CreditCardToken");
+                this.body = value;
+                onPropertyChanged("Body");
             }
         }
     }

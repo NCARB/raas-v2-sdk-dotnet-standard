@@ -1,7 +1,7 @@
 /*
  * Raas.Standard
  *
- * This file was automatically generated for Tango Card, Inc. by APIMATIC v2.0 ( https://apimatic.io )
+ * This file was automatically generated for Tango Card, Inc. by APIMATIC v2.0 ( https://apimatic.io ).
  */
 using System;
 using System.IO;
@@ -29,13 +29,13 @@ namespace TangoCard.Raas.Models
         private Models.CurrencyBreakdownModel denomination;
         private string utid;
         private string rewardName;
+        private Models.NameEmailModel sender;
+        private Models.NameEmailModel recipient;
         private bool sendEmail;
+        private string etid;
         private string status;
         private DateTime createdAt;
         private Models.RewardModel reward;
-        private Models.NameEmailModel sender;
-        private Models.NameEmailModel recipient;
-        private string etid;
         private string campaign;
         private string emailSubject;
         private string externalRefID;
@@ -180,6 +180,40 @@ namespace TangoCard.Raas.Models
         }
 
         /// <summary>
+        /// The sender data
+        /// </summary>
+        [JsonProperty("sender")]
+        public Models.NameEmailModel Sender 
+        { 
+            get 
+            {
+                return this.sender; 
+            } 
+            set 
+            {
+                this.sender = value;
+                onPropertyChanged("Sender");
+            }
+        }
+
+        /// <summary>
+        /// The recipient data
+        /// </summary>
+        [JsonProperty("recipient")]
+        public Models.NameEmailModel Recipient 
+        { 
+            get 
+            {
+                return this.recipient; 
+            } 
+            set 
+            {
+                this.recipient = value;
+                onPropertyChanged("Recipient");
+            }
+        }
+
+        /// <summary>
         /// Indicates if an email was sent to the recipient
         /// </summary>
         [JsonProperty("sendEmail")]
@@ -193,6 +227,23 @@ namespace TangoCard.Raas.Models
             {
                 this.sendEmail = value;
                 onPropertyChanged("SendEmail");
+            }
+        }
+
+        /// <summary>
+        /// The email template id
+        /// </summary>
+        [JsonProperty("etid")]
+        public string Etid 
+        { 
+            get 
+            {
+                return this.etid; 
+            } 
+            set 
+            {
+                this.etid = value;
+                onPropertyChanged("Etid");
             }
         }
 
@@ -245,57 +296,6 @@ namespace TangoCard.Raas.Models
             {
                 this.reward = value;
                 onPropertyChanged("Reward");
-            }
-        }
-
-        /// <summary>
-        /// The sender data
-        /// </summary>
-        [JsonProperty("sender")]
-        public Models.NameEmailModel Sender 
-        { 
-            get 
-            {
-                return this.sender; 
-            } 
-            set 
-            {
-                this.sender = value;
-                onPropertyChanged("Sender");
-            }
-        }
-
-        /// <summary>
-        /// The recipient data
-        /// </summary>
-        [JsonProperty("recipient")]
-        public Models.NameEmailModel Recipient 
-        { 
-            get 
-            {
-                return this.recipient; 
-            } 
-            set 
-            {
-                this.recipient = value;
-                onPropertyChanged("Recipient");
-            }
-        }
-
-        /// <summary>
-        /// The email template id
-        /// </summary>
-        [JsonProperty("etid")]
-        public string Etid 
-        { 
-            get 
-            {
-                return this.etid; 
-            } 
-            set 
-            {
-                this.etid = value;
-                onPropertyChanged("Etid");
             }
         }
 

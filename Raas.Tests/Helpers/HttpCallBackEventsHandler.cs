@@ -1,7 +1,7 @@
 /*
  * Raas.Tests
  *
- * This file was automatically generated for Tango Card, Inc. by APIMATIC v2.0 ( https://apimatic.io )
+ * This file was automatically generated for Tango Card, Inc. by APIMATIC v2.0 ( https://apimatic.io ).
  */
 using TangoCard.Raas.Http.Client;
 using TangoCard.Raas.Http.Request;

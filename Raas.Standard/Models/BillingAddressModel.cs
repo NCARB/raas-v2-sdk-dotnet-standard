@@ -1,7 +1,7 @@
 /*
  * Raas.Standard
  *
- * This file was automatically generated for Tango Card, Inc. by APIMATIC v2.0 ( https://apimatic.io )
+ * This file was automatically generated for Tango Card, Inc. by APIMATIC v2.0 ( https://apimatic.io ).
  */
 using System;
 using System.IO;
@@ -24,12 +24,12 @@ namespace TangoCard.Raas.Models
         private string firstName;
         private string lastName;
         private string addressLine1;
+        private string addressLine2;
         private string city;
         private string state;
         private string postalCode;
         private string country;
         private string emailAddress;
-        private string addressLine2;
 
         /// <summary>
         /// The first name
@@ -79,6 +79,23 @@ namespace TangoCard.Raas.Models
             {
                 this.addressLine1 = value;
                 onPropertyChanged("AddressLine1");
+            }
+        }
+
+        /// <summary>
+        /// An optional second address line
+        /// </summary>
+        [JsonProperty("addressLine2")]
+        public string AddressLine2 
+        { 
+            get 
+            {
+                return this.addressLine2; 
+            } 
+            set 
+            {
+                this.addressLine2 = value;
+                onPropertyChanged("AddressLine2");
             }
         }
 
@@ -164,23 +181,6 @@ namespace TangoCard.Raas.Models
             {
                 this.emailAddress = value;
                 onPropertyChanged("EmailAddress");
-            }
-        }
-
-        /// <summary>
-        /// An optional second address line
-        /// </summary>
-        [JsonProperty("addressLine2")]
-        public string AddressLine2 
-        { 
-            get 
-            {
-                return this.addressLine2; 
-            } 
-            set 
-            {
-                this.addressLine2 = value;
-                onPropertyChanged("AddressLine2");
             }
         }
     }

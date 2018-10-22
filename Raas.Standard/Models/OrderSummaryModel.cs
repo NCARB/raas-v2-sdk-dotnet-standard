@@ -1,7 +1,7 @@
 /*
  * Raas.Standard
  *
- * This file was automatically generated for Tango Card, Inc. by APIMATIC v2.0 ( https://apimatic.io )
+ * This file was automatically generated for Tango Card, Inc. by APIMATIC v2.0 ( https://apimatic.io ).
  */
 using System;
 using System.IO;
@@ -32,9 +32,9 @@ namespace TangoCard.Raas.Models
         private Models.NameEmailModel sender;
         private Models.NameEmailModel recipient;
         private bool sendEmail;
+        private string etid;
         private string status;
         private DateTime createdAt;
-        private string etid;
 
         /// <summary>
         /// The reference order id
@@ -224,6 +224,23 @@ namespace TangoCard.Raas.Models
         }
 
         /// <summary>
+        /// The order's email template id
+        /// </summary>
+        [JsonProperty("etid")]
+        public string Etid 
+        { 
+            get 
+            {
+                return this.etid; 
+            } 
+            set 
+            {
+                this.etid = value;
+                onPropertyChanged("Etid");
+            }
+        }
+
+        /// <summary>
         /// The order's status
         /// </summary>
         [JsonProperty("status")]
@@ -255,23 +272,6 @@ namespace TangoCard.Raas.Models
             {
                 this.createdAt = value;
                 onPropertyChanged("CreatedAt");
-            }
-        }
-
-        /// <summary>
-        /// The order's email template id
-        /// </summary>
-        [JsonProperty("etid")]
-        public string Etid 
-        { 
-            get 
-            {
-                return this.etid; 
-            } 
-            set 
-            {
-                this.etid = value;
-                onPropertyChanged("Etid");
             }
         }
     }

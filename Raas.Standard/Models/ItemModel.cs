@@ -1,7 +1,7 @@
 /*
  * Raas.Standard
  *
- * This file was automatically generated for Tango Card, Inc. by APIMATIC v2.0 ( https://apimatic.io )
+ * This file was automatically generated for Tango Card, Inc. by APIMATIC v2.0 ( https://apimatic.io ).
  */
 using System;
 using System.IO;
@@ -27,12 +27,12 @@ namespace TangoCard.Raas.Models
         private string status;
         private string valueType;
         private string rewardType;
-        private DateTime createdDate;
-        private DateTime lastUpdateDate;
-        private List<string> countries;
         private double? minValue;
         private double? maxValue;
         private double? faceValue;
+        private DateTime createdDate;
+        private DateTime lastUpdateDate;
+        private List<string> countries;
 
         /// <summary>
         /// The UTID
@@ -137,6 +137,57 @@ namespace TangoCard.Raas.Models
         }
 
         /// <summary>
+        /// The minimum orderable value (for variable value items)
+        /// </summary>
+        [JsonProperty("minValue")]
+        public double? MinValue 
+        { 
+            get 
+            {
+                return this.minValue; 
+            } 
+            set 
+            {
+                this.minValue = value;
+                onPropertyChanged("MinValue");
+            }
+        }
+
+        /// <summary>
+        /// The maximum orderable value (for variable value items)
+        /// </summary>
+        [JsonProperty("maxValue")]
+        public double? MaxValue 
+        { 
+            get 
+            {
+                return this.maxValue; 
+            } 
+            set 
+            {
+                this.maxValue = value;
+                onPropertyChanged("MaxValue");
+            }
+        }
+
+        /// <summary>
+        /// The face value of the gift card
+        /// </summary>
+        [JsonProperty("faceValue")]
+        public double? FaceValue 
+        { 
+            get 
+            {
+                return this.faceValue; 
+            } 
+            set 
+            {
+                this.faceValue = value;
+                onPropertyChanged("FaceValue");
+            }
+        }
+
+        /// <summary>
         /// The date the item was created
         /// </summary>
         [JsonConverter(typeof(IsoDateTimeConverter))]
@@ -186,57 +237,6 @@ namespace TangoCard.Raas.Models
             {
                 this.countries = value;
                 onPropertyChanged("Countries");
-            }
-        }
-
-        /// <summary>
-        /// The minimum orderable value (for variable value items)
-        /// </summary>
-        [JsonProperty("minValue")]
-        public double? MinValue 
-        { 
-            get 
-            {
-                return this.minValue; 
-            } 
-            set 
-            {
-                this.minValue = value;
-                onPropertyChanged("MinValue");
-            }
-        }
-
-        /// <summary>
-        /// The maximum orderable value (for variable value items)
-        /// </summary>
-        [JsonProperty("maxValue")]
-        public double? MaxValue 
-        { 
-            get 
-            {
-                return this.maxValue; 
-            } 
-            set 
-            {
-                this.maxValue = value;
-                onPropertyChanged("MaxValue");
-            }
-        }
-
-        /// <summary>
-        /// The face value of the gift card
-        /// </summary>
-        [JsonProperty("faceValue")]
-        public double? FaceValue 
-        { 
-            get 
-            {
-                return this.faceValue; 
-            } 
-            set 
-            {
-                this.faceValue = value;
-                onPropertyChanged("FaceValue");
             }
         }
     }

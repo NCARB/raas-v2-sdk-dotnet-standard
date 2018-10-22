@@ -1,7 +1,7 @@
 /*
  * Raas.Standard
  *
- * This file was automatically generated for Tango Card, Inc. by APIMATIC v2.0 ( https://apimatic.io )
+ * This file was automatically generated for Tango Card, Inc. by APIMATIC v2.0 ( https://apimatic.io ).
  */
 using System;
 using System.Collections.Generic;
@@ -123,12 +123,11 @@ namespace TangoCard.Raas.Controllers
         /// <summary>
         /// Creates an account under a given customer
         /// </summary>
-        /// <param name="customerIdentifier">Required parameter: Customer Identifier</param>
-        /// <param name="body">Required parameter: Request Body</param>
+        /// <param name="Models.CreateAccountInput">Object containing request parameters</param>
         /// <return>Returns the Models.AccountModel response from the API call</return>
-        public Models.AccountModel CreateAccount(string customerIdentifier, Models.CreateAccountRequestModel body)
+        public Models.AccountModel CreateAccount(Models.CreateAccountInput input)
         {
-            Task<Models.AccountModel> t = CreateAccountAsync(customerIdentifier, body);
+            Task<Models.AccountModel> t = CreateAccountAsync(input);
             APIHelper.RunTaskSynchronously(t);
             return t.Result;
         }
@@ -136,17 +135,16 @@ namespace TangoCard.Raas.Controllers
         /// <summary>
         /// Creates an account under a given customer
         /// </summary>
-        /// <param name="customerIdentifier">Required parameter: Customer Identifier</param>
-        /// <param name="body">Required parameter: Request Body</param>
+        /// <param name="Models.CreateAccountInput">Object containing request parameters</param>
         /// <return>Returns the Models.AccountModel response from the API call</return>
-        public async Task<Models.AccountModel> CreateAccountAsync(string customerIdentifier, Models.CreateAccountRequestModel body)
+        public async Task<Models.AccountModel> CreateAccountAsync(Models.CreateAccountInput input)
         {
             //validating required parameters
-            if (null == customerIdentifier)
-                throw new ArgumentNullException("customerIdentifier", "The parameter \"customerIdentifier\" is a required parameter and cannot be null.");
+            if (null == input.CustomerIdentifier)
+                throw new ArgumentNullException("customerIdentifier", "The property \"CustomerIdentifier\" in the input object cannot be null.");
 
-            if (null == body)
-                throw new ArgumentNullException("body", "The parameter \"body\" is a required parameter and cannot be null.");
+            if (null == input.Body)
+                throw new ArgumentNullException("body", "The property \"Body\" in the input object cannot be null.");
 
             //the base uri for api requests
             string _baseUri = Configuration.GetBaseURI();
@@ -158,7 +156,7 @@ namespace TangoCard.Raas.Controllers
             //process optional template parameters
             APIHelper.AppendUrlWithTemplateParameters(_queryBuilder, new Dictionary<string, object>()
             {
-                { "customerIdentifier", customerIdentifier }
+                { "customerIdentifier", input.CustomerIdentifier }
             });
 
 
@@ -174,7 +172,7 @@ namespace TangoCard.Raas.Controllers
             };
 
             //append body params
-            var _body = APIHelper.JsonSerialize(body);
+            var _body = APIHelper.JsonSerialize(input.Body);
 
             //prepare the API call request to fetch the response
             HttpRequest _request = ClientInstance.PostBody(_queryUrl, _headers, _body, Configuration.PlatformName, Configuration.PlatformKey);

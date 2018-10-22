@@ -1,7 +1,7 @@
 /*
  * Raas.Standard
  *
- * This file was automatically generated for Tango Card, Inc. by APIMATIC v2.0 ( https://apimatic.io )
+ * This file was automatically generated for Tango Card, Inc. by APIMATIC v2.0 ( https://apimatic.io ).
  */
 using System;
 using System.IO;
@@ -23,8 +23,8 @@ namespace TangoCard.Raas.Models
         // These fields hold the values for the public properties.
         private string path;
         private string message;
-        private string constraint;
         private string invalidValue;
+        private string constraint;
 
         /// <summary>
         /// The path to the invalid value
@@ -61,23 +61,6 @@ namespace TangoCard.Raas.Models
         }
 
         /// <summary>
-        /// The constraint validated
-        /// </summary>
-        [JsonProperty("constraint")]
-        public string Constraint 
-        { 
-            get 
-            {
-                return this.constraint; 
-            } 
-            set 
-            {
-                this.constraint = value;
-                onPropertyChanged("Constraint");
-            }
-        }
-
-        /// <summary>
         /// The value that was invalid
         /// </summary>
         [JsonProperty("invalidValue")]
@@ -91,6 +74,23 @@ namespace TangoCard.Raas.Models
             {
                 this.invalidValue = value;
                 onPropertyChanged("InvalidValue");
+            }
+        }
+
+        /// <summary>
+        /// The constraint validated
+        /// </summary>
+        [JsonProperty("constraint")]
+        public string Constraint 
+        { 
+            get 
+            {
+                return this.constraint; 
+            } 
+            set 
+            {
+                this.constraint = value;
+                onPropertyChanged("Constraint");
             }
         }
     }
