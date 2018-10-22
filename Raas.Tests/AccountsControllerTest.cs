@@ -95,7 +95,7 @@ namespace TangoCard.Raas
             Assert.IsNotNull(result, "Result should exist");
 
             Assert.IsTrue(TestHelper.IsArrayOfJsonObjectsProperSubsetOf(
-                    "[\n	{\n		\"accountIdentifier\": \"sdkautotest2\",\n		\"accountNumber\": \"A11720237\",\n		\"displayName\": \"SDK Auto Testing 2\",\n		\"currencyCode\": \"USD\",\n                \"currentBalance\": 0,\n		\"createdAt\": \"2018-04-26T18:13:45.196Z\",\n		\"status\": \"ACTIVE\",\n		\"contactEmail\": \"test@example.com\"\n	}\n]", 
+                    "[\n	{\n		\"accountIdentifier\": \"sdkautotest2\",\n		\"accountNumber\": \"A11720237\",\n		\"displayName\": \"SDK Auto Testing 2\",\n		\"currencyCode\": \"USD\",\n                \"currentBalance\": 0.00,\n		\"createdAt\": \"2018-04-26T18:13:45.196Z\",\n		\"status\": \"ACTIVE\",\n		\"contactEmail\": \"test@example.com\"\n	}\n]", 
                     TestHelper.ConvertStreamToString(httpCallBackHandler.Response.RawBody), 
                     true, true, false),
                     "Response body should have matching keys");
@@ -127,7 +127,7 @@ namespace TangoCard.Raas
             Assert.IsNotNull(result, "Result should exist");
 
             Assert.IsTrue(TestHelper.IsJsonObjectProperSubsetOf(
-                    "{\n  \"accountIdentifier\": \"sdkautotest2\",\n  \"accountNumber\": \"A11720237\",\n  \"displayName\": \"SDK Auto Testing 2\",\n  \"currencyCode\": \"USD\",\n  \"currentBalance\": 0,\n  \"createdAt\": \"2018-04-26T18:13:45.196Z\",\n  \"status\": \"ACTIVE\",\n  \"contactEmail\": \"test@example.com\"\n}", 
+                    "{\n  \"accountIdentifier\": \"sdkautotest2\",\n  \"accountNumber\": \"A11720237\",\n  \"displayName\": \"SDK Auto Testing 2\",\n  \"currencyCode\": \"USD\",\n  \"currentBalance\": 0.00,\n  \"createdAt\": \"2018-04-26T18:13:45.196Z\",\n  \"status\": \"ACTIVE\",\n  \"contactEmail\": \"test@example.com\"\n}", 
                     TestHelper.ConvertStreamToString(httpCallBackHandler.Response.RawBody), 
                     true, true, false),
                     "Response body should have matching keys");
