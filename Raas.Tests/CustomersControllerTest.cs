@@ -43,7 +43,7 @@ namespace TangoCard.Raas
         /// Tests retrieving all customers 
         /// </summary>
         [Test]
-        public async Task TestTestGetAllCustomers() 
+        public async Task TestGetAllCustomers() 
         {
 
             // Perform API call
@@ -73,7 +73,7 @@ namespace TangoCard.Raas
         /// Tests retrieving a single customer 
         /// </summary>
         [Test]
-        public async Task TestTestGetCustomer() 
+        public async Task TestGetCustomer() 
         {
             // Parameters for the API call
             string customerIdentifier = "sdkautotest1";
