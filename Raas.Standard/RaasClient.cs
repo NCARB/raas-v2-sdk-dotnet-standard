@@ -36,17 +36,6 @@ namespace TangoCard.Raas
         }
 
         /// <summary>
-        /// Singleton access to Orders controller
-        /// </summary>
-        public OrdersController Orders
-        {
-            get
-            {
-                return OrdersController.Instance;
-            }
-        }
-
-        /// <summary>
         /// Singleton access to Fund controller
         /// </summary>
         public FundController Fund
@@ -65,6 +54,17 @@ namespace TangoCard.Raas
             get
             {
                 return ExchangeRatesController.Instance;
+            }
+        }
+
+        /// <summary>
+        /// Singleton access to Orders controller
+        /// </summary>
+        public OrdersController Orders
+        {
+            get
+            {
+                return OrdersController.Instance;
             }
         }
 

@@ -43,7 +43,7 @@ namespace TangoCard.Raas
         /// Tests retrieving deposit information 
         /// </summary>
         [Test]
-        public async Task TestTestGetDeposit() 
+        public async Task TestGetDeposit() 
         {
             // Parameters for the API call
             string depositId = "RAD-180426-5407";
@@ -75,7 +75,7 @@ namespace TangoCard.Raas
         /// Tests adding funds to an account 
         /// </summary>
         [Test]
-        public async Task TestTestAddFunds() 
+        public async Task TestAddFunds() 
         {
             // Parameters for the API call
             Raas.Models.DepositRequestModel body = APIHelper.JsonDeserialize<Raas.Models.DepositRequestModel>("{   \"accountIdentifier\": \"sdkautotest5\",   \"amount\": 1.25,   \"creditCardToken\": \"56ac1a30-6ba2-4047-9b8c-70f97a5502c5\",   \"customerIdentifier\": \"sdkautotest4\" }");
@@ -107,7 +107,7 @@ namespace TangoCard.Raas
         /// Tests retrieving all credit cards for a platform 
         /// </summary>
         [Test]
-        public async Task TestTestGetCreditCards() 
+        public async Task TestGetCreditCards() 
         {
 
             // Perform API call
@@ -137,7 +137,7 @@ namespace TangoCard.Raas
         /// Tests retrieving a single credit card 
         /// </summary>
         [Test]
-        public async Task TestTestGetCreditCard() 
+        public async Task TestGetCreditCard() 
         {
             // Parameters for the API call
             string token = "56ac1a30-6ba2-4047-9b8c-70f97a5502c5";

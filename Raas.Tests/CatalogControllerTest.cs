@@ -43,7 +43,7 @@ namespace TangoCard.Raas
         /// Tests if we can successfully retrieve a platform's catalog 
         /// </summary>
         [Test]
-        public async Task TestTestRetrieveCatalog() 
+        public async Task TestRetrieveCatalog() 
         {
 
             // Perform API call
