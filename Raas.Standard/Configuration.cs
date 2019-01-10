@@ -7,6 +7,7 @@ namespace TangoCard.Raas
     public partial class Configuration
     {
 
+
         public enum Environments
         {
             //The sandbox environment does not use real money and can be used for testing.
