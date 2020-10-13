@@ -7,12 +7,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
-    <AssemblyName>Raas.Standard</AssemblyName>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>TangoCard.Raas</AssemblyName>
     <Version>2.3.3.0</Version>
     <Authors></Authors>
     <Company></Company>
-    <Product>Raas.Standard</Product>
+    <Product>TangoCard.Raas</Product>
     <Copyright>Copyright ©  2017</Copyright>
     <AssemblyVersion>2.3.3.0</AssemblyVersion>
     <FileVersion>2.3.3.0</FileVersion>
