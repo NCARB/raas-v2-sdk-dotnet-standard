@@ -43,7 +43,7 @@ namespace TangoCard.Raas
             {
                 if (client == null)
                 {
-                    client = new RaasClient();
+                    client = new RaasClient(platformKey: Environment.GetEnvironmentVariable("TANGO_PLATFORM_KEY"));
                 }
                 return client;
             }
